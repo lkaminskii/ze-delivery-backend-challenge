@@ -54,11 +54,6 @@
 	    	<type>pom</type>
 		</dependency>
 		<dependency>
-		    <groupId>com.google.code.gson</groupId>
-		    <artifactId>gson</artifactId>
-		    <version>2.10.1</version>
-		</dependency>
-		<dependency>
  		   <groupId>org.json</groupId>
  		   <artifactId>json</artifactId>
   		   <version>20230618</version>
@@ -89,7 +84,16 @@
         	<version>5.9.1</version>
         	<scope>test</scope>
     	</dependency>
-
+    	<dependency>
+    <groupId>de.grundid.opendatalab</groupId>
+    <artifactId>geojson-jackson</artifactId>
+    <version>1.14</version>
+</dependency>
+		<dependency>
+    <groupId>com.mapbox.mapboxsdk</groupId>
+    <artifactId>mapbox-sdk-geojson</artifactId>
+    <version>5.8.0-beta.4</version>
+</dependency>
 	</dependencies>
 
 	<build>

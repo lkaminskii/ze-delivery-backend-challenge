@@ -58,10 +58,10 @@ public class PartnerController {
 		return partnerService.insert(partner);
 	}
 	
-	public ResponseEntity<Optional<Partner>> getNearest (@RequestParam double latitude, @RequestParam double longitude) {
-		Optional<Partner> entity = searchPartnerService.findNearestPartner(latitude, longitude);
-		
-		return ResponseEntity.ok(entity);
+	@GetMapping(value = "/nearest")
+	public Partner findNearestPartner(@RequestParam(defaultValue = "0") double longitude,
+									  @RequestParam(defaultValue = "0") double latitude) {
+		return searchPartnerService.findNearestPartner(longitude, latitude);
 	}
-
+	
 }
