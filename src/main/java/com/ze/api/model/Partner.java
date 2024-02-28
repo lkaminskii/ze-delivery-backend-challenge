@@ -1,5 +1,7 @@
 package com.ze.api.model;
 
+import java.io.Serializable;
+
 import org.geojson.MultiPolygon;
 import org.geojson.Point;
 
@@ -16,8 +18,9 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="tb_partner")
-public class Partner {
+public class Partner implements Serializable{
 	
+	private static final long serialVersionUID = 2996162169438188257L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

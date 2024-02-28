@@ -85,15 +85,20 @@
         	<scope>test</scope>
     	</dependency>
     	<dependency>
-    <groupId>de.grundid.opendatalab</groupId>
-    <artifactId>geojson-jackson</artifactId>
-    <version>1.14</version>
-</dependency>
+ 		    <groupId>de.grundid.opendatalab</groupId>
+    		<artifactId>geojson-jackson</artifactId>
+    		<version>1.14</version>
+		</dependency>
 		<dependency>
-    <groupId>com.mapbox.mapboxsdk</groupId>
-    <artifactId>mapbox-sdk-geojson</artifactId>
-    <version>5.8.0-beta.4</version>
-</dependency>
+    		<groupId>com.mapbox.mapboxsdk</groupId>
+    		<artifactId>mapbox-sdk-geojson</artifactId>
+    		<version>5.8.0-beta.4</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.modelmapper</groupId>
+  			<artifactId>modelmapper</artifactId>
+  			<version>3.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

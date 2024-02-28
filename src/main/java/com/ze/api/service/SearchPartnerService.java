@@ -9,13 +9,14 @@ import org.springframework.stereotype.Service;
 import com.ze.api.model.Partner;
 import com.ze.api.repository.PartnerRepository;
 
-
-
 @Service
 public class SearchPartnerService {
 	
-	@Autowired
 	private PartnerRepository partnerRepository;
+	
+	public SearchPartnerService(PartnerRepository partnerRepository) {
+		this.partnerRepository = partnerRepository;
+	}
 	
 	public Partner findNearestPartner(Double longitude, Double latitude) {
         List<Partner> partners = partnerRepository.findAll();

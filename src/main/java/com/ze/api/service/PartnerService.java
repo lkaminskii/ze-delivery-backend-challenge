@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,12 +14,16 @@ import com.ze.api.model.Partner;
 import com.ze.api.repository.PartnerRepository;
 
 import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
 
 @Service
 public class PartnerService {
 	
-	@Autowired
 	private PartnerRepository partnerRepository;
+	
+	public PartnerService(PartnerRepository partnerRepository) {
+		this.partnerRepository = partnerRepository;
+	}
 	
 	public List<Partner> getAll() {
 		return partnerRepository.findAll();
